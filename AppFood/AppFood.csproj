@@ -54,7 +54,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CalculateValueInvoice.cs" />
     <Compile Include="Services\GenerateRandomNumberForOrder.cs" />
-    <Compile Include="Views\ShowProducts.cs" />
+    <Compile Include="Views\ShowRefrigerator.cs" />
+    <Compile Include="Views\ShowSnacks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

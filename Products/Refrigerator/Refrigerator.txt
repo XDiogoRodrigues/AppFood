@@ -1,0 +1,8 @@
+Fanta uva lata,5.00
+Fanta laranja lata,5.00
+Fanta Guarana lata,5.00
+Coca cola lata,6.00
+Antartica lata,5.00
+Coca Cola 2L,12.00
+Fanta Laranja 2L,10.00
+Fanta Uva 2L,10.00

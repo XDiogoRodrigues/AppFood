@@ -1,7 +1,7 @@
-X-Bacon Salada,15.00
-X-Bacon,12.00
-X-Bacon Egg,16.00
-X-Frango,12.00
-X-Egg Frango,13.50
-X-Frango Bacon,15.50
-X-Tudo,22.00
+X-Bacon Salada_15.00_Bacon, Salada, Pão Brioche, Hamburger, Maionese
+X-Bacon_12.00
+X-Bacon Egg_16.00
+X-Frango_12.00
+X-Egg Frango_13.50
+X-Frango Bacon_15.50
+X-Tudo_22.00
