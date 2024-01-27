@@ -10,6 +10,11 @@ namespace AppFood.Entities
         private double _totalOrderValue { get; set; }
         public ShoppingCart Cart { get; set; }
 
+        public Invoice(int numberInvoice, ShoppingCart cart)
+        {
+            NumberInvoice = numberInvoice;
+            Cart = cart;
+        }
         public override string ToString()
         {
             StringBuilder s1 = new StringBuilder();
