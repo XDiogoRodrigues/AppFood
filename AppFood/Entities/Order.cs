@@ -10,15 +10,14 @@ namespace AppFood.Entities
         public int NumberOrder { get; set; }
         public Client CustomerOrder { get; set; }
         public string Observation { get; set; }
-        public List<Product> products = new List<Product>();
-        public ShoppingCart CartProducts { get; set; }
+        public ShoppingCart Cart { get; set; }
 
-        public Order(int numberOrder, Client clientOrder, string observation, ShoppingCart cart)
+        public Order(int numberOrder, Client clientOrder, string observation, ShoppingCart products)
         {
             NumberOrder = numberOrder;
             CustomerOrder = clientOrder;
             Observation = observation;
-            CartProducts = cart;
+            Cart = products;
         }
 
         public override string ToString()
@@ -29,10 +28,9 @@ namespace AppFood.Entities
             s1.AppendLine($"Observation: {Observation}");
             s1.AppendLine();
             s1.AppendLine($"Order in information:");
-            foreach(Product product in products)
-            {
-                s1.AppendLine($"Product's name: {product.Name}, Price of the product: R$: {product.Price}, Quantity: {product.Quantity}");
-                
+            foreach(Product product in Cart.products)
+            {                        
+                s1.AppendLine($"Product's name: {product.Name}, Price of the product: R$: {product.Price}, Quantity: {product.Quantity}");               
             }
             s1.AppendLine($"Observation: {Observation}");
             return s1.ToString();
