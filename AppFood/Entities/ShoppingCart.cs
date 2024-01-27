@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AppFood.Entities
 {
-    static class ShoppingCart
+    class ShoppingCart
     {
-        static public List<Product> products = new List<Product>();
+        public List<Product> products = new List<Product>();
 
     }
 }
