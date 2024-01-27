@@ -1,6 +1,6 @@
-﻿using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Globalization;
+using AppFood.Services;
 
 namespace AppFood.Entities
 {
@@ -14,6 +14,11 @@ namespace AppFood.Entities
         {
             NumberInvoice = numberInvoice;
             Cart = cart;
+        }
+
+        public void CalculateInvoice()
+        {
+            _totalOrderValue = CalculateValueInvoice.CalculateValue(Cart);
         }
         public override string ToString()
         {
