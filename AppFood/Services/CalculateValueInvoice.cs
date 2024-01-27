@@ -10,7 +10,8 @@ namespace AppFood.Services
 
             foreach (Product product in cart.products)
             {
-                totalValue += product.Price;
+                totalValue += product.Price * product.Quantity;
+
             }
             return totalValue;
         }

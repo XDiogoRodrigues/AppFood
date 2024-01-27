@@ -26,9 +26,9 @@ namespace AppFood.Entities
             s1.AppendLine($"Invoice number: {NumberInvoice}");
             foreach(Product product in Cart.products)
             {
-                s1.AppendLine($"Name's product: {product.Name}, Price of product: {product.Price.ToString("F2", CultureInfo.InvariantCulture)}, Quantity: {product.Quantity}");
+                s1.AppendLine($"Name's product: {product.Name}, Price of product: R$ {product.Price.ToString("F2", CultureInfo.InvariantCulture)}, Quantity: {product.Quantity}");
             }
-            s1.AppendLine($"Total order value: {_totalOrderValue.ToString("F2", CultureInfo.InvariantCulture)}");
+            s1.AppendLine($"Total order value: R$ {_totalOrderValue.ToString("F2", CultureInfo.InvariantCulture)}");
             return s1.ToString();
 
         }

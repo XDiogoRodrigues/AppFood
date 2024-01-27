@@ -30,9 +30,8 @@ namespace AppFood.Entities
             s1.AppendLine($"Order in information:");
             foreach(Product product in Cart.products)
             {                        
-                s1.AppendLine($"Product's name: {product.Name}, Price of the product: R$: {product.Price}, Quantity: {product.Quantity}");               
+                s1.AppendLine($"Product's name: {product.Name}, Price of the product: R$: {product.Price.ToString("F2",CultureInfo.InvariantCulture)}, Quantity: {product.Quantity}");               
             }
-            s1.AppendLine($"Observation: {Observation}");
             return s1.ToString();
 
         }
