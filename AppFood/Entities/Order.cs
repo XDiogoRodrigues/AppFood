@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 
 namespace AppFood.Entities
 {
     class Order
     {
         public int NumberOrder { get; set; }
-        public Client ClientOrder { get; set; }
+        public Client CustomerOrder { get; set; }
         public string Observation { get; set; }
         public List<Product> products = new List<Product>();
         public ShoppingCart CartProducts { get; set; }
@@ -17,9 +16,27 @@ namespace AppFood.Entities
         public Order(int numberOrder, Client clientOrder, string observation, ShoppingCart cart)
         {
             NumberOrder = numberOrder;
-            ClientOrder = clientOrder;
+            CustomerOrder = clientOrder;
             Observation = observation;
             CartProducts = cart;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder s1 = new StringBuilder();
+            s1.AppendLine($"Number order: {NumberOrder}");
+            s1.AppendLine($"Client name: {CustomerOrder.Name}");
+            s1.AppendLine($"Observation: {Observation}");
+            s1.AppendLine();
+            s1.AppendLine($"Order in information:");
+            foreach(Product product in products)
+            {
+                s1.AppendLine($"Product's name: {product.Name}, Price of the product: R$: {product.Price}, Quantity: {product.Quantity}");
+                
+            }
+            s1.AppendLine($"Observation: {Observation}");
+            return s1.ToString();
+
         }
 
 
